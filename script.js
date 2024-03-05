@@ -25,3 +25,35 @@ taskForm = document.getElementById('taskForm');
 taskTable = document.getElementById('taskTable');
 console.log(taskForm);
 console.log(taskTable);
+
+
+
+// Function to handle form submissions
+function handleSubmission(event) {
+    event.preventDefault();
+    // TODO: Get form input values
+    var taskName = document.getElementById('taskName').value;
+    var taskDescription = document.getElementById('taskDescription').value;
+    var taskDeadline = document.getElementById('taskDeadline').value;
+    // TODO: Validate input fields
+    if (taskName === '' || taskDescription === '' || taskDeadline ===''){
+    console.log('Task name and deadline are required!');
+      
+    }
+
+    // TODO: Update the tasks array
+tasks.push({name:taskName,description:taskDescription,deadline:taskDeadline});
+
+
+    render();
+    }
+    // Function to render tasks in the table
+    function render() {
+    // TODO: Use array methods to create a new table row of data for each item in the arr
+    }
+    // Function to initialize the table
+    function init() {
+    taskTable.innerHTML = ''; // Clear the table
+    tasks = []; // Reset the tasks array
+    render(); // Call the render function
+    }
