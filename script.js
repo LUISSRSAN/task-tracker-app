@@ -37,7 +37,7 @@ function handleSubmission(event) {
     var taskDeadline = document.getElementById('taskDeadline').value;
     // TODO: Validate input fields
     if (taskName === '' || taskDescription === '' || taskDeadline ===''){
-    console.log('Task name and deadline are required!');
+    alert('Task name and deadline are required!');
       
     }
 
@@ -72,3 +72,12 @@ tasks.push({name:taskName,description:taskDescription,deadline:taskDeadline});
     tasks = []; // Reset the tasks array
     render(); // Call the render function
     }
+
+
+
+    // Event listener for form submission
+taskForm.addEventListener('submit'
+, handleSubmission);
+
+// Call the init function to set up the initial state of the app
+init();
